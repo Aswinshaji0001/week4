@@ -188,3 +188,80 @@
     background-position: center;
     background-size: cover;
 }
+.six{
+    width: 100%;
+    height: 45vh;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.six h2{
+    padding-left: 180px;
+}
+.s1{
+    position: absolute;
+    left: 10%;
+    width: 70%;
+    height: 40vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.s1c{
+    width: 22%;
+    height: 30vh;
+    background-color: aliceblue;
+    border-radius: 8px;
+}
+.s1img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+}
+.seven{
+    width: 100%;
+    height: 90vh;
+    background-color: rgb(47, 38, 57);
+    position: relative;
+    
+}
+.se1{
+    position: absolute;
+    left: 10%;
+    top:7%;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.se1 .pl{
+    width: 50px;
+    height: 50px;
+}
+.se1 .pr{
+    padding-left: 10px;
+}
+.se2{
+    position: absolute;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    left: 13%;
+    top:20%;
+}
+.seven .cards{
+    margin-top: 150px;
+    background-color: rgb(47, 38, 57);;
+}
+.cards .c1 .con{
+    color: white;
+}
+.eight{
+    width: 100%;
+    height: 75vh;
+    background-color: blue;
+}
