@@ -27,7 +27,6 @@
     width: 60%;
     height: 50%;
     line-height: 4vh;
-    border: 1px solid grey;
     color: gray;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
@@ -103,15 +102,19 @@
     justify-content: space-between;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(0, 0, 0);
-  
+    text-decoration: none;
 
 }
 .sl ul{
+    text-decoration: none;
     line-height: 5vh;
     justify-content: space-evenly;
     display: flex;
     align-items: center;
     list-style-type: none;
+}
+.sl li{
+    text-decoration: none;
 }
 .sl{
     margin-left: 100px;
@@ -505,4 +508,9 @@
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
+}
+.inp{
+    width:590px;
+    padding: 4px;
+    height: 100%;
 }

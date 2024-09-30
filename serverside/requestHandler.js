@@ -18,13 +18,34 @@ export async function getShows(req,res) {
         res.status(404).send({msg:error})
     }
 }
+export async function getShow(req,res) {
+    try {
+        console.log(req.params);
+        const {id}=req.params
+        const data=await movieSchema.findOne({_id:id});
+        res.status(200).send(data);
+    } catch (error) {
+        res.status(404).send(error)
+    }
+}
 export async function deleteShow(req,res) {
     try {
         const {_id}=req.params;
         console.log(_id);
-        const data=await employSchema.deleteOne({_id});
+        const data=await movieSchema.deleteOne({_id});
         res.status(201).send(data);
     } catch (error) {
         res.status(404).send(error)
     }   
+}
+export async function editShow(req,res) {
+    try {
+        const {_id}=req.params;
+    const {...movie}=req.body;
+    const data=await movieSchema.updateOne({_id},{$set:{...movie}});
+    res.status(201).send(data);
+    } catch (error) {
+        res.status(404).send(error)
+    }
+    
 }

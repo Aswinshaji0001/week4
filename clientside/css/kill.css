@@ -84,7 +84,6 @@
     justify-content: space-between;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(0, 0, 0);
-  
 
 }
 .sl ul{
@@ -114,9 +113,8 @@
 .kill{
     width: 100%;
     height: 70vh;
-    background-color: blue;
+    background-color: rgb(34, 34, 60);
     position: relative;
-    background-image: url("../images/killss.jpeg");
     background-position: center;
     object-fit: cover;
     background-size: cover;
@@ -128,21 +126,27 @@
     position: absolute;
     width: 20%;
     height: 60vh;
- 
     border-radius: 15px;
-    background-image: url("../images/kill.jpeg");
     background-position: center;
     object-fit: cover;
     background-size: cover;
+   
+}
+.poster img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .text{
     position: absolute;
     width: 35%;
     height: 65vh ; 
-
     left: 32%;
     top: 5%;
-    
 }
 .text h1{
     margin-left: 10px;
@@ -161,7 +165,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-
+    text-align: center;
 }
 .brn{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -169,6 +173,7 @@
     border-radius: 8px;
     background-color: white;
     color: black;
+    text-align: center;
 }
 .pos2{
     margin-top: 20px;
@@ -178,6 +183,7 @@
     background-color: azure;
     border-radius: 8px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
 }
 .pos3{
     margin-left: 10px;
@@ -187,6 +193,7 @@
     background-color: rgb(245, 245, 245);
     border-radius: 8px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
 }
 .pos4{
     width: 90%;
@@ -203,7 +210,6 @@
 }
 .pos5 .bm{
     margin-top: 50px;
-    margin-left: 20px;
     padding-left: 60px;
     padding-right: 60px;
     padding-top: 15px;
@@ -456,4 +462,65 @@
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
+}
+.bs{
+    width: 100%;
+    text-align: left;
+    margin-top: 2%;
+}
+.editb{
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.deleteb{
+    background-color: #3154d0;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+.inp{
+    width: 60%;
+    height: 50%;
 }
