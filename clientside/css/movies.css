@@ -70,6 +70,7 @@
     padding-right: 10px;
     padding-top: 2px;
     padding-bottom: 2px;
+    width: 75px;
 
 }
 .head5{
@@ -178,4 +179,19 @@ height: 100%;
     width:590px;
     padding: 4px;
     height: 100%;
+}
+.hx1{
+    width: 200px;
+}
+.addmov{
+    background-color: #ff0800;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }

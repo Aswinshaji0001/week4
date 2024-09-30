@@ -74,7 +74,7 @@
         line-height: 20px;
 }
 .head4{
-  margin-left: 10px;
+    margin-left: 10px;
     border: 1px solid red;
     background-color: red;
     color: white;
@@ -104,6 +104,9 @@
     color: rgb(0, 0, 0);
     text-decoration: none;
 
+}
+.sl a{
+    text-decoration: none;
 }
 .sl ul{
     text-decoration: none;
