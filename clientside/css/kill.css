@@ -162,6 +162,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 85%;
     height: 8vh;
+
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -180,6 +181,7 @@
     margin-left: 10px;
     width: 95%;
     height: 9vh;
+    line-height: 9vh;
     background-color: azure;
     border-radius: 8px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -194,6 +196,7 @@
     border-radius: 8px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
+    line-height: 5vh;
 }
 .pos4{
     width: 90%;
