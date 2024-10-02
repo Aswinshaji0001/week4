@@ -7,7 +7,7 @@ document.getElementById("addmovie").addEventListener("submit",async(e)=>{
     const rdate=document.getElementById("rdate").value;
     const lang=document.getElementById("lang").value;
     const cert=document.getElementById("cert").value;
-    fetch("http://localhost:3000/api/addshow",{
+    fetch("http://34.237.242.58/api/addshow",{
         method:"POST",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify({name,dur,genre,rdate,lang,cert,cover})
