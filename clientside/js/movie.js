@@ -5,7 +5,7 @@ console.log(id);
 
 
 async function getMovie() {
-    const res=await fetch(`http://localhost:3000/api/getshow/${id}`);
+    const res=await fetch(`http://34.237.242.58/api/getshow/${id}`);
     const movie=await res.json();
     
         str=`
@@ -52,7 +52,7 @@ async function getMovie() {
 getMovie();
 
 async function deleteShow(id) {
-    fetch(`http://localhost:3000/api/deleteshow/${id}`,{
+    fetch(`http://34.237.242.58/api/deleteshow/${id}`,{
       method:"DELETE",
           headers:{"Content-Type":"application/json"}
     }).then((res)=>{
