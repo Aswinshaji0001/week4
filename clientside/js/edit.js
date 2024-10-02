@@ -3,7 +3,7 @@ const url=window.location.href;
 const urlParams=new URLSearchParams(url.split("?")[1]);
 const id=urlParams.get("id");
 async function getMovie() {
-    const res=await fetch(`http://localhost:3000/api/getshow/${id}`)
+    const res=await fetch(`http://34.237.242.58/api/getshow/${id}`)
     const movie=await res.json();
     document.getElementById("editmovie").innerHTML=`
             <label for="movie-name">Movie Name:</label>
@@ -45,7 +45,7 @@ document.getElementById("editmovie").addEventListener("submit",async(e)=>{
     const rdate=document.getElementById("rdate").value;
     const lang=document.getElementById("lang").value;
     const cert=document.getElementById("cert").value;
-    fetch(`http://localhost:3000/api/editshow/${id}`,{
+    fetch(`http://34.237.242.58/api/editshow/${id}`,{
         method:"PUT",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify({name,dur,genre,rdate,lang,cert,cover})
