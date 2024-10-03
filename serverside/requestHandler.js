@@ -2,9 +2,10 @@ import movieSchema from './models/movies.model.js'
 
 export async function addShow(req,res){
     try{
-        const{...movie}=req.body;
-        if(!(name&&dur&&genre&&rdate&&lang&&cert&&cover&&banner))      
-        return res.status(404).send({msg:"fields are empty"})
+        const{...movie}=req.body;   
+        const{name,dur,genre,rdate,lang,cert,format,cover,banner}=req.body;   
+        if(!(name&&dur&&genre&&rdate&&lang&&cert&&format&&cover&&banner))
+            return res.status(404).send({msg:"Fields are empty"})
         const data=await movieSchema.create({...movie});
         return res.status(201).send({msg:data})
     }catch(error){
@@ -22,7 +23,7 @@ export async function getShows(req,res) {
 }
 export async function getShow(req,res) {
     try {
-        console.log(req.params);
+        
         const {id}=req.params
         const data=await movieSchema.findOne({_id:id});
         res.status(200).send(data);

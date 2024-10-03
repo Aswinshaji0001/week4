@@ -1,10 +1,13 @@
 let cover;
+let banner;
 const url=window.location.href;
 const urlParams=new URLSearchParams(url.split("?")[1]);
 const id=urlParams.get("id");
 async function getMovie() {
     const res=await fetch(`http://localhost:3000/api/getshow/${id}`)
     const movie=await res.json();
+    cover=movie.cover;
+    banner=movie.banner;
     document.getElementById("editmovie").innerHTML=`
             <label for="movie-name">Movie Name:</label>
             <input type="text" id="name" name="name" value="${movie.name}">
@@ -23,6 +26,11 @@ async function getMovie() {
 
             <label for="certification">Certification:</label>
             <input type="text" id="cert" name="cert" value="${movie.cert}">
+
+            
+            <label for="format">Format:</label>
+            <input type="text" id="format" name="format" value="${movie.format}">
+
 
             <label for="cover-image">Cover Image </label>
             <input type="file" id="cover" name="cover" onchange="pic()" value="${movie.cover}">
@@ -44,15 +52,21 @@ document.getElementById("editmovie").addEventListener("submit",async(e)=>{
     const rdate=document.getElementById("rdate").value;
     const lang=document.getElementById("lang").value;
     const cert=document.getElementById("cert").value;
+    const format=document.getElementById("format").value;
     fetch(`http://localhost:3000/api/editshow/${id}`,{
         method:"PUT",
         headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({name,dur,genre,rdate,lang,cert,cover,banner})
-    }).then((res)=>{
+        body:JSON.stringify({name,dur,genre,rdate,lang,cert,format,cover,banner})
+    }).then(async(res)=>{
         console.log(res);
+
         if(res.status==201){
             alert("success");
             window.location.href="../pages/movies.html"
+        }
+        else if(res.status==404){
+            const data=await res.json();
+            alert(data.msg)
         }
         else{
             alert("error")

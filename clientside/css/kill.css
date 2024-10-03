@@ -93,6 +93,9 @@
     align-items: center;
     list-style-type: none;
 }
+.sl a{
+    text-decoration: none;
+}
 .sl{
     margin-left: 100px;
     width: 25%;
@@ -177,9 +180,9 @@
 .pos2{
     margin-top: 20px;
     margin-left: 10px;
-    width: 95%;
-    height: 9vh;
-    line-height: 9vh;
+    width: 50%;
+    height: 6vh;
+    line-height: 6vh;
     background-color: azure;
     border-radius: 8px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -200,7 +203,6 @@
     width: 90%;
     height: 5vh;
   color: white;
-    margin-left: 15px;
     margin-top: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -210,7 +212,7 @@
         justify-content: space-evenly;
 }
 .pos5 .bm{
-    margin-top: 50px;
+  
     padding-left: 60px;
     padding-right: 60px;
     padding-top: 15px;
@@ -470,11 +472,11 @@
     margin-top: 2%;
 }
 .editb{
-  background-color: #EA4C89;
+  background-color: #ffffff;
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: #000000;
   cursor: pointer;
   display: inline-block;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -496,11 +498,11 @@
   touch-action: manipulation;
 }
 .deleteb{
-    background-color: #3154d0;
+    background-color: #ffffff;
     border-radius: 8px;
     border-style: none;
     box-sizing: border-box;
-    color: #FFFFFF;
+    color: #0b0000;
     cursor: pointer;
     display: inline-block;
     font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;

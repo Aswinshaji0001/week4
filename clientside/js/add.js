@@ -8,10 +8,11 @@ document.getElementById("addmovie").addEventListener("submit",async(e)=>{
     const rdate=document.getElementById("rdate").value;
     const lang=document.getElementById("lang").value;
     const cert=document.getElementById("cert").value;
+    const format=document.getElementById("format").value;
     fetch("http://localhost:3000/api/addshow",{
         method:"POST",
         headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({name,dur,genre,rdate,lang,cert,cover,banner})
+        body:JSON.stringify({name,dur,genre,rdate,lang,cert,format,cover,banner})
     }).then((res)=>{
         console.log(res);
         if(res.status==201){
@@ -19,7 +20,7 @@ document.getElementById("addmovie").addEventListener("submit",async(e)=>{
             window.location.href="./movies.html"
         }
         else if(res.status==404){
-            alert("error");
+            alert("fields are empty");
         }
         else{
             alert("error")

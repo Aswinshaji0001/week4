@@ -20,7 +20,7 @@ async function getMovie() {
                 </div>
             </div>
             <div class="pos2">
-                <h3>2D,3D,IMAX 2D,MX4D 3D,4DX 3D,3D SCREEN X,ICE 3D,</h3>
+                <h3>${movie.format}</h3>
             </div>
             <div class="pos3">
                 <h3>${movie.lang}</h3>
