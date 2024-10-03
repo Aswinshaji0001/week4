@@ -5,9 +5,8 @@ console.log(id);
 
 
 async function getMovie() {
-    const res=await fetch(`http://34.237.242.58/api/getshow/${id}`);
+    const res=await fetch(`http://localhost:3000/api/getshow/${id}`);
     const movie=await res.json();
-    
         str=`
             <div class="poster">
              <img src="${movie.cover}"alt="${movie.name}">
@@ -22,7 +21,6 @@ async function getMovie() {
             </div>
             <div class="pos2">
                 <h3>2D,3D,IMAX 2D,MX4D 3D,4DX 3D,3D SCREEN X,ICE 3D,</h3>
-                <h3>IMAX 3D,2D SCREEN X</h3>
             </div>
             <div class="pos3">
                 <h3>${movie.lang}</h3>
@@ -46,13 +44,14 @@ async function getMovie() {
         `
    
     document.getElementById("contents").innerHTML=str;
+    document.getElementById("contents").style.backgroundImage=`linear-gradient(90deg, rgb(26, 26, 26) 24.97%, rgb(26, 26, 26) 38.3%, rgba(26, 26, 26, 0.04) 97.47%, rgb(26, 26, 26) 100%), url(${movie.banner})`
    
     
 }
 getMovie();
 
 async function deleteShow(id) {
-    fetch(`http://34.237.242.58/api/deleteshow/${id}`,{
+    fetch(`http://localhost:3000/api/deleteshow/${id}`,{
       method:"DELETE",
           headers:{"Content-Type":"application/json"}
     }).then((res)=>{

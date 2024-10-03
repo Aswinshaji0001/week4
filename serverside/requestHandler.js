@@ -3,6 +3,8 @@ import movieSchema from './models/movies.model.js'
 export async function addShow(req,res){
     try{
         const{...movie}=req.body;
+        if(!(name&&dur&&genre&&rdate&&lang&&cert&&cover&&banner))      
+        return res.status(404).send({msg:"fields are empty"})
         const data=await movieSchema.create({...movie});
         return res.status(201).send({msg:data})
     }catch(error){
@@ -31,7 +33,6 @@ export async function getShow(req,res) {
 export async function deleteShow(req,res) {
     try {
         const {_id}=req.params;
-        console.log(_id);
         const data=await movieSchema.deleteOne({_id});
         res.status(201).send(data);
     } catch (error) {

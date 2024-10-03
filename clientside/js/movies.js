@@ -1,5 +1,5 @@
 async function getMovies() {
-    const res=await fetch("http://34.237.242.58/api/getshows");
+    const res=await fetch("http://localhost:3000/api/getshows");
     const movies=await res.json();
     console.log(movies);
     str=``;
@@ -23,7 +23,7 @@ async function getMovies() {
 getMovies();
 document.getElementById("inp").addEventListener('keyup',async(e)=>{
     try {
-        const res=await fetch("http://34.237.242.58/api/getshows");
+        const res=await fetch("http://localhost:3000/api/getshows");
         const movie=await res.json();
         console.log(movie);
         str=``;

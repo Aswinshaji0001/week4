@@ -6,6 +6,7 @@ const movieSchema = new mongoose.Schema({
     rdate:{type:String},
     lang:{type:String},
     cert:{type:String},
-    cover:{type:String}
+    cover:{type:String},
+    banner:{type:String}
 })
 export default mongoose.model.Users||mongoose.model("Movies",movieSchema)
